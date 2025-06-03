@@ -45,7 +45,17 @@ public class Player
         }
     }
 
-    public void RemoveBattle()
+    public void RemoveBattle(int index)
+    {
+        listaBatalhas.remove(index);
+    }
+
+    public void RemoveBattle(Battle battle)
+    {
+        listaBatalhas.remove(battle);
+    }
+
+    public void PrintAllBattles()
     {
 
     }
