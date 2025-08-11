@@ -1,7 +1,7 @@
-package org.juliocesar.statics;
+package net.setafac.statics;
 
-import org.juliocesar.entities.Enemy;
-import org.juliocesar.entities.Character;
+import net.setafac.entities.Enemy;
+import net.setafac.entities.Character;
 
 public class Battle
 {

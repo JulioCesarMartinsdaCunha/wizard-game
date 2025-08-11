@@ -1,4 +1,4 @@
-package org.juliocesar.entities;
+package net.setafac.entities;
 
 public class Enemy
 {

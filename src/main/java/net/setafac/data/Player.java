@@ -1,7 +1,7 @@
-package org.juliocesar;
+package net.setafac.data;
 
-import org.juliocesar.entities.Character;
-import org.juliocesar.statics.Battle;
+import net.setafac.entities.Character;
+import net.setafac.statics.Battle;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -9,17 +9,19 @@ import java.util.Scanner;
 public class Player
 {
     String name = "";
+
     int batalhasVencidas = 0;
     int batalhasPerdidas = 0;
     int totalBatalhas = 0;
 
-    ArrayList<Character> listaPersonagens = new ArrayList<Character>();
-    Character characterAtual = null;
+    ArrayList<Character> characterList = new ArrayList<Character>();
+    Character currentCharacter = null;
 
-    ArrayList<Battle> listaBatalhas = new ArrayList<Battle>();
+    ArrayList<Battle> battlesList = new ArrayList<Battle>();
 
     public Player()
     {
+
     }
 
     /// METHODS
@@ -39,20 +41,20 @@ public class Player
 
     public void AddBattles(Battle newBattle)
     {
-        if(!listaBatalhas.contains(newBattle))
+        if(!battlesList.contains(newBattle))
         {
-            listaBatalhas.add(newBattle);
+            battlesList.add(newBattle);
         }
     }
 
     public void RemoveBattle(int index)
     {
-        listaBatalhas.remove(index);
+        battlesList.remove(index);
     }
 
     public void RemoveBattle(Battle battle)
     {
-        listaBatalhas.remove(battle);
+        battlesList.remove(battle);
     }
 
     public void PrintAllBattles()
@@ -64,16 +66,16 @@ public class Player
 
     public void setCurrentPerson(Character person)
     {
-        characterAtual = person;
-        if(!listaPersonagens.contains(person))
+        currentCharacter = person;
+        if(!characterList.contains(person))
         {
-            listaPersonagens.add(person);
+            characterList.add(person);
         }
     }
 
     public Battle getBattle(int index)
     {
-        return listaBatalhas.get(index);
+        return battlesList.get(index);
     }
 
     public String getName()
@@ -83,12 +85,12 @@ public class Player
 
     public Object[] getPersons()
     {
-        return listaPersonagens.toArray();
+        return characterList.toArray();
     }
 
     public Character getCurrentPerson()
     {
-        return characterAtual;
+        return currentCharacter;
     }
 
     public int countWins()
