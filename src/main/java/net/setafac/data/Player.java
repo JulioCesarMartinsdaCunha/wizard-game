@@ -10,9 +10,9 @@ public class Player
 {
     String name = "";
 
-    int batalhasVencidas = 0;
-    int batalhasPerdidas = 0;
-    int totalBatalhas = 0;
+    int battleWins = 0;
+    int battleLoses = 0;
+    int totalBattles = 0;
 
     ArrayList<Character> characterList = new ArrayList<Character>();
     Character currentCharacter = null;
@@ -57,13 +57,12 @@ public class Player
         battlesList.remove(battle);
     }
 
-    public void PrintAllBattles()
+    public void ShowAllBattles()
     {
 
     }
 
     /// GETTERS&SETTERS
-
     public void setCurrentPerson(Character person)
     {
         currentCharacter = person;
@@ -93,18 +92,18 @@ public class Player
         return currentCharacter;
     }
 
-    public int countWins()
+    public int battlesWins()
     {
-        return batalhasVencidas;
+        return battleWins;
     }
 
-    public int countLoses()
+    public int battlesLoses()
     {
-        return batalhasPerdidas;
+        return battleLoses;
     }
 
     public int countBattles()
     {
-        return totalBatalhas;
+        return totalBattles;
     }
 }

@@ -35,7 +35,7 @@ public class MainScreen extends JFrame
         this.setVisible(true);
     }
 
-    public void PrintInConsole(String text)
+    public void WritteInConsole(String text)
     {
 
     }

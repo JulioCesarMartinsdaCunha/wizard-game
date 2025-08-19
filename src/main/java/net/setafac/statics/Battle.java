@@ -5,30 +5,31 @@ import net.setafac.entities.Character;
 
 public class Battle
 {
-    Character playerChar = null;
-    Enemy playerInimigo = null;
+    Character charPlayer = null;
+    Enemy enemyPlayer = null;
 
-    boolean playerVence = false;
+    boolean isPlayerWins = false;
 
     public Battle(Character character, Enemy inimigo, boolean playerWins)
     {
-        this.playerChar = character;
-        this.playerInimigo = inimigo;
-        this.playerVence = playerWins;
+        this.charPlayer = character;
+        this.enemyPlayer = inimigo;
+        this.isPlayerWins = playerWins;
     }
 
+    /// SETTERS&GETTERS
     public boolean isPlayerWins()
     {
-        return playerVence;
+        return isPlayerWins;
     }
 
     public Character getCharacter()
     {
-        return playerChar;
+        return charPlayer;
     }
 
     public Enemy getEnemy()
     {
-        return playerInimigo;
+        return enemyPlayer;
     }
 }

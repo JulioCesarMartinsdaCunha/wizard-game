@@ -1,8 +1,11 @@
 package net.setafac.entities.parent;
 
+import net.setafac.enuns.EntityRax;
+
 public abstract class Entity
 {
     protected String name = "";
+    protected EntityRax race;
 
     protected int maxLife = 0;
     protected int life = 0;
